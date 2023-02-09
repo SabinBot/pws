@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    min-height: 100vh;
+}
+
+/* Main */
+
+
+.midContainer {
+    width: 100%;
+    align-items: center;
+}
+
+.myServices {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+}
+
+.firstImgCont {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.firstImg {
+    background-image: url(/images/frontenddeveloper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 400px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.secondImgCont {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F4F9F9;
+}
+
+.secondImg {
+    background-image: url(/images/responsivewebsite.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 400px;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: auto;
+    animation: 1.4s ease-out 0s 1 slideInRight;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.described {
+    margin: 100px auto;
+    width: 35%;
+    color: #7F8487;
+    font-size: 17px;
+    line-height: 1.5;
+    animation: 1.2s ease-in 0s 1 slideInRight;
+}
+
+.sDeveloper {
+    margin: auto;
+    color: #7F8487;
+    font-size: 17px;
+    animation: 1.3s ease-in 0s 1 slideInLeft;
+}
+.developer {
+    text-align: center;
+    margin: 50px 0;
+}
+.contactMe {
+    color: #181818;
+    font-family: Sofia Sans;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+a.contactMe:hover {
+    color: #414042;
+}
+
+.aboutS {
+    margin-top: 35px;
+}
+
+.aboutMe {
+    text-decoration: none;
+    color: #161D6F;
+    font-family: Sofia Sans, sans-serif;
+}
+
+a.aboutMe {
+    position: relative;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+
+a.aboutMe::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: #161D6F;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .5s ease-in-out;
+}
+
+a.aboutMe:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    color: #000;
+}
+
+.aboutMe:hover {
+    color: #000;
+}
+
+.iDo {
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.sDo {
+    color: #7F8487;
+    font-family: Sofia Sans, sans-serif;
+    line-height: 1.2;
+}
+
+.pDo {
+    color: #7F8487;
+    font-family: Sofia Sans, sans-serif;
+}
+
+.allServices {
+    position: relative;
+    width: 100%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.fa {
+    font-size: 55px;
+    color: #474E68;
+    margin-top: 18px;
+}
+
+.devices,
+.message {
+    margin: 35px auto;
+    line-height: 1;
+    font-weight: 500;
+    color: #7F8487;
+    text-align: center;
+    max-width: 200px;
+}
+
+.sDevices,
+.sMessage {
+    width: 300px;
+    height: 250px;
+    background-color: #F4F9F9;
+    border-radius: 25px;
+}
+
+.sDevices {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.sMessage {
+    margin-right: auto;
+}
+
+.fSubtitle {
+    padding: 20px;
+    color: #181D31;
+    text-transform: uppercase;
+}
+
+
+/* footer */
+
+.sFooterCont {
+    background-color: #D6E4E5;
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.copyRight {
+    margin-top: 23px;
+    color: #7F8487;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a.goHomeLink {
+    position: relative;
+    text-decoration: none;
+    color: #7F8487;
+    transition: all .3s ease-in-out;
+}
+
+a.goHomeLink::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+a.goHomeLink:hover {
+    color: #000;
+}
+
+a.goHomeLink:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+    color: #000;
+}
+
+.goHomeLink:visited {
+    text-decoration: none;
+}
+
+.socialMedia {
+    margin: 15px 0;
+}
+
+.fa-brands {
+    color: #7F8487;
+    margin: 0 5px;
+    font-size: 17px;
+}
+
+.fa-brands:hover {
+    color: #000;
+    font-weight: bold;
+    transition: all .3s ease-out;
+}
+
+
+/* Media screens */
+
+@media (min-width: 1381px) {
+    #headerNav {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .midContainer {
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .myServices {
+        width: 85%;
+    }
+
+    .firstImg,
+    .secondImg {
+        width: 50%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .firstImgCont {
+        margin-top: 150px;
+    }
+    .firstImgCont,
+    .secondImgCont {
+        width: 100%;
+    }
+
+    .developer,
+    .described {
+        margin: 100px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .myServices {
+        width: 100%;
+    }
+
+    .firstImg,
+    .secondImg {
+        clip-path: none;
+        width: 100%;
+    }
+
+    .allServices {
+        margin-top: -80px;
+    }
+
+    .sDevices,
+    .sMessage {
+        margin: 50px auto;
+    }
+}

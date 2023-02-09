@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@700&display=swap');
+
+/* Navbar */
+
+
+#headerNav {
+    overflow: hidden;
+    background-color: #FFF;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0px;
+    transition: 0.4s;
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+#headerNav a {
+    text-decoration: none;
+    color: #7F8487;
+}
+
+.sbLogo {
+    text-align: center;
+}
+
+#logo {
+    text-transform: uppercase;
+    letter-spacing: .030rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    font-family: Krona One;
+    color: #181D31;
+    font-size: 32px;
+    transition: .4s;
+}
+
+#logoSubtitle {
+    transition: .3s;
+}
+
+.myLinks {
+    position: relative;
+    display: flex;
+}
+
+.leftLinks {
+    display: flex;
+    list-style: none;
+    column-gap: 2rem;
+}
+
+a.middle {
+    position: relative;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+
+a.middle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: #7F8487;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+#headerNav a.middle:hover {
+    color: #1A120B;
+}
+
+a.middle:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    color: #000;
+}
+
+.contactLinks {
+    display: flex;
+    column-gap: 2em;
+}
+
+.contactLinks .cPush {
+    display: flex;
+    column-gap: .30rem;
+    transition: all .5s;
+}
+
+.cPush:hover {
+    transform: translate(-1px, -1px);
+    color: #1A120B;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+}
+
+.cPush:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/* DropDown Button */
+
+.dropBtn {
+    display: block;
+    font-size: 20px;
+    transition: all .7s ease-out;
+
+}
+
+.dropBtn:focus,
+.dropBtn:hover {
+    color: #111;
+}
+
+.dropDown {
+    margin-left: auto;
+    right: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownContent {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    right: 0;
+    top: 115px;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropDownContent a {
+    color: #FFF;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all .7s ease-in;
+    outline: none;
+    z-index: 1;
+}
+
+.dropDown a:hover {
+    box-shadow: inset 100vw 0 0 0 #ddd;
+}
+
+.dropDown {
+    display: none;
+}
+
+.show {
+    position: fixed;
+    background-color: #fff;
+    display: block;
+    z-index: 1;
+
+}
+@media (min-width: 320px) and (max-width: 800px) {
+  
+#headerNav {
+    position: fixed;
+}
+
+.sbLogo {
+    position: absolute;
+    left: 15px;
+}
+
+.dropBtn {
+    display: block;
+    cursor: pointer;
+}
+
+.dropDown {
+    display: block;
+}
+
+.myLinks,
+.contactLinks {
+    display: none;
+}
+}
