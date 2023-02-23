@@ -10,15 +10,14 @@
     <link rel="icon" href="logos/bs.ico">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/mynavi.css">
-    <script src="js/scrollFunctionNav.js"></script>
-    <script src="js/dropDownBtn.js"></script>
 </head>
 
 <body>
-    <nav id="headerNav">
 
+    <nav id="headerNav">
         <div class="myLinks">
             <ul class="leftLinks">
+                <!--<li><a class="middle" href="#work">Work</a></li>-->
                 <li><a class="middle" href="about">About</a></li>
                 <li><a class="middle" href="contact">Contact</a></li>
             </ul>
@@ -30,7 +29,7 @@
             </a>
         </div>
         <div class="contactLinks ">
-            <a class="cPush" href="tel:=40743927566">
+            <a class="cPush" href="tel:40743927566">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-telephone-inbound" viewBox="0 0 16 16">
                     <path
@@ -51,6 +50,7 @@
         <div class="dropDown">
             <i class="fa fa-bars dropBtn" onclick="myFunction()"></i>
             <div id="myDropDown" class="dropDownContent">
+                <!--<a href="#work">Work</a>-->
                 <a href="about">About</a>
                 <a href="contact">Contact</a>
             </div>
@@ -62,11 +62,12 @@
             <div class="contactCont">
                 <div class="sMessageContainer">
                     <h3 id="contMessage">Let's talk about anything <!-- Message --> </h3>
-                    <div id="form-message-warning"></div> 
-				      		<div id="form-message-success">
-				            Your message was sent, thank you!
-				      		</div>
-                    <form id="contactForm" action="php/sendEmail.php" method="POST" name="contactForm" class="contactForm">
+                    <div id="form-message-warning"></div>
+                    <div id="form-message-success">
+                        Your message was sent, thank you!
+                    </div>
+                    <form id="contactForm" action="php/sendEmail.php" method="POST" name="contactForm"
+                        class="contactForm">
                         <div class="sRow">
                             <div class="column">
                                 <div class="formGroup">
@@ -84,7 +85,7 @@
                                     <input type="submit" name="send" value="Send Message" class="sButton btn-primary">
                                     <div class="submitting"></div>
                                 </div>
-                        </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -103,7 +104,6 @@
         <div class="contactImg"></div>
     </main>
 
-
     <footer class="sFooterCont">
         <div class="socialMedia">
             <a class="socialLinks" href="https://www.linkedin.com/in/sabin-bot" target="_blank"><i
@@ -116,13 +116,17 @@
                     class="fa-brands fa-instagram"></i></a>
         </div>
         <div class="copyRight">
-            <p class="sCopyright">&copy; 2023 <a class="goHomeLink" href="https://sabinbot.com/">Bot Sabin.</a> All rights reserved.</p>
+            <p class="sCopyright">&copy; 2023 <a class="goHomeLink" href="https://sabinbot.com/">Bot Sabin.</a> All
+                rights reserved.</p>
         </div>
     </footer>
 
+    <script src="js/scrollFunctionNav.js"></script>
+    <script src="js/dropDownBtn.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

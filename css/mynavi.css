@@ -43,15 +43,11 @@
     transition: .3s;
 }
 
-.myLinks {
-    position: relative;
-    display: flex;
-}
-
 .leftLinks {
     display: flex;
     list-style: none;
     column-gap: 2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a.middle {
@@ -87,6 +83,7 @@ a.middle:hover::before {
 .contactLinks {
     display: flex;
     column-gap: 2em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contactLinks .cPush {
@@ -96,14 +93,9 @@ a.middle:hover::before {
 }
 
 .cPush:hover {
-    transform: translate(-1px, -1px);
+    transition: .3s ease;
+    transform: scale(1.1);
     color: #1A120B;
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
-}
-
-.cPush:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
 }
 
 /* DropDown Button */
@@ -165,28 +157,29 @@ a.middle:hover::before {
     z-index: 1;
 
 }
+
 @media (min-width: 320px) and (max-width: 800px) {
-  
-#headerNav {
-    position: fixed;
-}
 
-.sbLogo {
-    position: absolute;
-    left: 15px;
-}
+    #headerNav {
+        position: fixed;
+    }
 
-.dropBtn {
-    display: block;
-    cursor: pointer;
-}
+    .sbLogo {
+        position: absolute;
+        left: 15px;
+    }
 
-.dropDown {
-    display: block;
-}
+    .dropBtn {
+        display: block;
+        cursor: pointer;
+    }
 
-.myLinks,
-.contactLinks {
-    display: none;
-}
+    .dropDown {
+        display: block;
+    }
+
+    .myLinks,
+    .contactLinks {
+        display: none;
+    }
 }
