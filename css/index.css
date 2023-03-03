@@ -107,6 +107,7 @@ body {
 
 a.contactMe:hover {
     color: #414042;
+    opacity: .7;
 }
 
 .aboutS {

@@ -5,7 +5,6 @@
 
 
 #headerNav {
-    overflow: hidden;
     background-color: #FFF;
     align-items: center;
     width: 100%;
@@ -16,7 +15,7 @@
     display: flex;
     top: 0;
     justify-content: space-around;
-    z-index: 1;
+    z-index: 100;
 }
 
 #headerNav a {
@@ -98,64 +97,49 @@ a.middle:hover::before {
     color: #1A120B;
 }
 
-/* DropDown Button */
+/* Hamburger Button */
 
-.dropBtn {
-    display: block;
-    font-size: 20px;
-    transition: all .7s ease-out;
-
-}
-
-.dropBtn:focus,
-.dropBtn:hover {
-    color: #111;
-}
-
-.dropDown {
-    margin-left: auto;
-    right: 15px;
-    position: relative;
-    display: inline-block;
-}
-
-.dropDownContent {
-    display: none;
+.toggleContainer {
     position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    overflow: auto;
-    right: 0;
-    top: 115px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    background: #FFF;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.dropDownContent a {
-    color: #FFF;
-    padding: 16px;
-    text-decoration: none;
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: all .7s ease-in;
-    outline: none;
-    z-index: 1;
+.toggleContainer.active {
+    height: max-content;
 }
 
-.dropDown a:hover {
+.toggleContainer.active .toggleLink {
+    padding: 25px;
+    transition: all .7s ease-in-out;
+    width: 100%;
+}
+.toggleContainer.active a:hover {
     box-shadow: inset 100vw 0 0 0 #ddd;
+    opacity: 95%;
 }
 
-.dropDown {
+#toggleBtn {
+    margin-left: auto;
+    padding: 10px;
+    font-size: 26px;
+    color: #000;
     display: none;
+    cursor: pointer;
 }
-
-.show {
-    position: fixed;
-    background-color: #fff;
-    display: block;
-    z-index: 1;
-
+#toggleBtn:hover {
+    color: #1d1c1c;
 }
 
 @media (min-width: 320px) and (max-width: 800px) {
@@ -169,14 +153,10 @@ a.middle:hover::before {
         left: 15px;
     }
 
-    .dropBtn {
-        display: block;
-        cursor: pointer;
+    #toggleBtn {
+        display: flex;
     }
 
-    .dropDown {
-        display: block;
-    }
 
     .myLinks,
     .contactLinks {

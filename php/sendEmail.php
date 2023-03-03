@@ -22,8 +22,10 @@ if ($_POST) {
    }
 
    // Set Message
-   $message .= "Email address: " . $email . "<br />";
-   $message .= "Message: <br /> $contact_message";
+    $message .= "Email address: " . $email . "<br />";
+    $message .= "Message: $contact_message";
+
+//   $message .= "Message: <br /> $contact_message";
 
    // Set From: header
    $from = $name . " <" . $email . ">";
